@@ -14,35 +14,37 @@
       background-color: #000000;
       color: #ffffff;
       font-family: Arial, sans‑serif;
-      /* Largura máxima no PC, ocupa quase toda a tela no celular */
-      max-width: min(90vw, 700px);
+      max-width: min(92vw, 750px);
       margin: 0 auto;
-      /* Espaçamento proporcional ao tamanho da tela */
-      padding: clamp(1.2rem, 4vw, 3rem);
-      line-height: 1.7;
-      /* Tamanho da letra: pequeno em celular, grande em telas maiores */
-      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      padding: clamp(1.3rem, 4.5vw, 3.2rem);
+      line-height: 1.8;
+      /* Texto principal: MAIOR — mínimo 1.1rem, ideal 3vw, máximo 1.5rem */
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
     }
     h1 {
       text-transform: uppercase;
-      /* Título sempre maior que o texto */
-      font-size: clamp(1.1rem, 3.2vw, 1.6rem);
-      margin-bottom: clamp(0.8rem, 2vw, 1.5rem);
+      /* Título: bem maior que o texto */
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      margin-bottom: clamp(1rem, 2.2vw, 1.8rem);
       color: #fcd34d;
       text-align: center;
     }
     .versiculo {
       font-style: italic;
-      margin: clamp(0.8rem, 2vw, 1.5rem) 0;
+      margin: clamp(1rem, 2.2vw, 1.8rem) 0;
       color: #cccccc;
+      /* Versículo um pouco maior que o corpo */
+      font-size: clamp(1.15rem, 3.1vw, 1.6rem);
     }
     .reflexao {
-      margin: clamp(0.8rem, 2vw, 1.5rem) 0;
+      margin: clamp(1rem, 2.2vw, 1.8rem) 0;
     }
     .oracao {
-      margin-top: clamp(1.5rem, 4vw, 2.5rem);
-      padding-top: clamp(0.8rem, 2vw, 1rem);
+      margin-top: clamp(1.8rem, 4.5vw, 3rem);
+      padding-top: clamp(1rem, 2.2vw, 1.2rem);
       border-top: 1px solid #333333;
+      /* Oração também destacada */
+      font-size: clamp(1.15rem, 3.1vw, 1.6rem);
     }
   </style>
 </head>
