@@ -5,32 +5,43 @@
   <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
   <title>Devocional do Dia</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border‑box;
+    }
     body {
       background-color: #000000;
       color: #ffffff;
       font-family: Arial, sans‑serif;
-      max-width: 600px;
+      /* Largura máxima no PC, ocupa quase toda a tela no celular */
+      max-width: min(90vw, 700px);
       margin: 0 auto;
-      padding: 2rem;
+      /* Espaçamento proporcional ao tamanho da tela */
+      padding: clamp(1.2rem, 4vw, 3rem);
       line-height: 1.7;
+      /* Tamanho da letra: pequeno em celular, grande em telas maiores */
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
     }
     h1 {
       text-transform: uppercase;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
+      /* Título sempre maior que o texto */
+      font-size: clamp(1.1rem, 3.2vw, 1.6rem);
+      margin-bottom: clamp(0.8rem, 2vw, 1.5rem);
       color: #fcd34d;
+      text-align: center;
     }
     .versiculo {
       font-style: italic;
-      margin: 1rem 0;
+      margin: clamp(0.8rem, 2vw, 1.5rem) 0;
       color: #cccccc;
     }
     .reflexao {
-      margin: 1rem 0;
+      margin: clamp(0.8rem, 2vw, 1.5rem) 0;
     }
     .oracao {
-      margin-top: 2rem;
-      padding-top: 1rem;
+      margin-top: clamp(1.5rem, 4vw, 2.5rem);
+      padding-top: clamp(0.8rem, 2vw, 1rem);
       border-top: 1px solid #333333;
     }
   </style>
