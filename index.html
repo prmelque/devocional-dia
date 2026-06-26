@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt‑BR">
+<head>
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
+  <title>Devocional do Dia</title>
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: Arial, sans‑serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      line-height: 1.7;
+    }
+    h1 {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #fcd34d;
+    }
+    .versiculo {
+      font-style: italic;
+      margin: 1rem 0;
+      color: #cccccc;
+    }
+    .reflexao {
+      margin: 1rem 0;
+    }
+    .oracao {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #333333;
+    }
+  </style>
+</head>
+<body>
+  <div id="devocional"></div>
+
+  <script src="dados.js"></script>
+  <script>
+    const hoje = new Date();
+    const diaDoAno = Math.ceil(
+      (hoje - new Date(hoje.getFullYear(), 0, 1)) / (1000 * 60 * 60 * 24)
+    );
+    const indice = (diaDoAno - 1) % devocionais.length;
+    const d = devocionais[indice];
+
+    document.getElementById('devocional').innerHTML = `
+      <h1>${d.titulo}</h1>
+      <div class="versiculo">${d.versiculo}</div>
+      <div class="reflexao">${d.reflexao}</div>
+      <div class="oracao"><strong>ORAÇÃO:</strong><br>${d.oracao}</div>
+    `;
+  </script>
+</body>
+</html>
